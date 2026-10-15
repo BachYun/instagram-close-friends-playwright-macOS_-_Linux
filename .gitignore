@@ -1,0 +1,68 @@
+# Private runtime data belongs OUTSIDE this repository. Defense in depth only.
+.local/
+.cache/
+data/
+private/
+exports/
+logs/
+reports/
+chrome-profile*/
+chrome-remote*/
+playwright-profile*/
+playwright-chrome*/
+playwright/.auth/
+.auth/
+.browser/
+Default/
+Profile */
+Cookies
+Cookies-journal
+Login Data*
+Local State
+Web Data*
+Session Storage/
+Local Storage/
+*.har
+*.zip
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.mp4
+*.webm
+*.sqlite*
+*.db
+*.csv
+!examples/followers.example.csv
+*.json
+.env
+.env.*
+*session*
+*cookie*
+*token*
+*.pem
+*.key
+*.p12
+*.pfx
+*.backup*
+*.old
+*.before_bulk
+*.before-*
+.close_friends*
+# Python/developer environment
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+.DS_Store
+.idea/
+.vscode/

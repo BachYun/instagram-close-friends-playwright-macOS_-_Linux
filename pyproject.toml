@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=77,<83"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "instagram-close-friends-playwright"
+version = "0.1.0b1"
+description = "Local, user-approved Close Friends browser helper with CSV tracking and separate verification."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "GPL-3.0-only"
+license-files = ["LICENSE", "NOTICE.md"]
+authors = [{name = "Project contributors"}]
+dependencies = ["playwright>=1.57,<2"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Operating System :: MacOS",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+close-friends = "close_friends_csv:entrypoint"
+
+[tool.setuptools]
+py-modules = ["close_friends_csv"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = ["browser: local mocked DOM integration; requires explicitly enabled Chromium"]

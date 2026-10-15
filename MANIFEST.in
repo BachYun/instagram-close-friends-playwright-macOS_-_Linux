@@ -1,0 +1,18 @@
+include LICENSE NOTICE.md README.md CHANGELOG.md CONTRIBUTING.md SECURITY.md PUBLIC_FILES.txt
+include requirements.txt requirements-dev.txt
+include .gitignore .gitattributes .editorconfig
+include examples/followers.example.csv
+recursive-include docs *.md
+recursive-include scripts *.py *.sh
+recursive-include tests *.py
+recursive-include .github *.yml *.md
+prune .venv
+prune .local
+prune .cache
+prune chrome-profile
+prune data
+prune private
+prune exports
+prune logs
+prune reports
+global-exclude *.pyc *.pyo *.zip *.har *.json *.png *.jpg *.mp4 *.sqlite* *.db *.backup* *.old
